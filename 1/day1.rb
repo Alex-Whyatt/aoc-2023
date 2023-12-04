@@ -51,7 +51,6 @@ digit_lookup = {
 words = digit_lookup.keys
 r_words = words.map(&:reverse)
 
-
 result = input.each.map do |line|
   digits = line.match(/(#{words.join("|")})/, 0)
   first = digit_lookup[digits[0]]
@@ -61,4 +60,4 @@ result = input.each.map do |line|
   (first + last).to_i
 end
 
-puts "The solution to part 1B is: #{result.reduce(:+)}" 
+puts "The solution to part 1B is: #{result.reduce(:+)}"
